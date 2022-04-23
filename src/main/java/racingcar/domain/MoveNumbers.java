@@ -3,6 +3,7 @@ package racingcar.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.common.ErrorMessage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +27,8 @@ public class MoveNumbers {
     }
 
     public static MoveNumbers newInstance(Integer... moveNumber) {
-        return new MoveNumbers(Arrays.asList(moveNumber));
+        List<Integer> moveNumbers = new ArrayList<>(Arrays.asList(moveNumber));
+        return new MoveNumbers(moveNumbers);
     }
 
     public void addRandomNumbers(int addCount) {
