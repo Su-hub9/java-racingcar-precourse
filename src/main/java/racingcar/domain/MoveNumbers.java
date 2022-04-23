@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.common.ErrorMessage;
 
 import java.util.Arrays;
@@ -13,9 +14,14 @@ import java.util.List;
  **/
 public class MoveNumbers {
 
+    private final int MOVE_NUMBER_MIN = 0;
+    private final int MOVE_NUMBER_MAX = 9;
     private List<Integer> moveNumbers;
 
     private MoveNumbers(List<Integer> moveNumbers) {
+        for (Integer number : moveNumbers) {
+            validate(number);
+        }
         this.moveNumbers = moveNumbers;
     }
 
@@ -23,8 +29,10 @@ public class MoveNumbers {
         return new MoveNumbers(Arrays.asList(moveNumber));
     }
 
-    public void addNumber(Integer number) {
-        this.moveNumbers.add(number);
+    public void addRandomNumbers(int addCount) {
+        for (int i = 0; i < addCount; i++) {
+            this.moveNumbers.add(Randoms.pickNumberInRange(MOVE_NUMBER_MIN, MOVE_NUMBER_MAX));
+        }
     }
 
     public Integer getIndex(int index) {
@@ -32,6 +40,12 @@ public class MoveNumbers {
             throw new IllegalStateException(ErrorMessage.ERROR_NOT_MOVE_NUMBERS);
         }
         return this.moveNumbers.get(index);
+    }
+
+    private void validate(Integer moveNumber) {
+        if (moveNumber < MOVE_NUMBER_MIN || moveNumber > MOVE_NUMBER_MAX) {
+            throw new IllegalStateException(ErrorMessage.ERROR_MOVE_NUMBER_RANGE);
+        }
     }
 
     private boolean isEmpty() {
