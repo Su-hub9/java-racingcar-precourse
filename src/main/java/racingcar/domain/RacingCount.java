@@ -10,9 +10,10 @@ import racingcar.common.ErrorMessage;
  **/
 public class RacingCount {
 
-    private final String POSITIVE_NUMBER_REGEX = "^\\d+$";
-    private final String NUMBER_ZERO = "0";
-    private Integer count;
+    private static final String POSITIVE_NUMBER_REGEX = "^\\d+$";
+    private static final String NUMBER_ZERO = "0";
+
+    private final Integer count;
 
     public RacingCount(String inputCount) {
         this.count = validate(inputCount);

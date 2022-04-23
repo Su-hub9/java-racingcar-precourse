@@ -15,9 +15,10 @@ import java.util.List;
  **/
 public class MoveNumbers {
 
-    private final int MOVE_NUMBER_MIN = 0;
-    private final int MOVE_NUMBER_MAX = 9;
-    private List<Integer> moveNumbers;
+    private static final int MOVE_NUMBER_MIN = 0;
+    private static final int MOVE_NUMBER_MAX = 9;
+
+    private final List<Integer> moveNumbers;
 
     private MoveNumbers(List<Integer> moveNumbers) {
         for (Integer number : moveNumbers) {

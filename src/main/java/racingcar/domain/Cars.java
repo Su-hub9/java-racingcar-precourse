@@ -14,7 +14,8 @@ import java.util.List;
 public class Cars {
 
     private static final String NAME_SPLIT_SEPARATOR = ",";
-    private List<Car> cars;
+
+    private final List<Car> cars;
 
     private Cars(List<Car> cars) {
         this.cars = cars;

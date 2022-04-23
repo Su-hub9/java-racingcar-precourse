@@ -8,15 +8,16 @@ package racingcar.domain;
  **/
 public class MovementCount {
 
-    private final int INCREASE_CONDITION = 4;
+    private static final int FORWARD_CONDITION = 4;
+
     private Integer count;
 
     public MovementCount() {
         this.count = 0;
     }
 
-    public void increase(int moveNumber) {
-        if (moveNumber >= INCREASE_CONDITION) {
+    public void movingForward(int moveNumber) {
+        if (moveNumber >= FORWARD_CONDITION) {
             this.count++;
         }
     }

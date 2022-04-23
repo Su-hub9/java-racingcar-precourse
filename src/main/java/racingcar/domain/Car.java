@@ -1,15 +1,15 @@
 package racingcar.domain;
 
 /**
- * 단일 자동차
+ * Car
  *
  * @author suji
  * @date 2022-04-23
  **/
 public class Car {
 
-    private CarName carName;
-    private MovementCount movementCount;
+    private final CarName carName;
+    private final MovementCount movementCount;
 
     private Car(CarName carName, MovementCount movementCount) {
         this.carName = carName;
@@ -21,7 +21,7 @@ public class Car {
     }
 
     public void move(int moveNumber) {
-        this.movementCount.increase(moveNumber);
+        this.movementCount.movingForward(moveNumber);
     }
 
     public String getCarName() {

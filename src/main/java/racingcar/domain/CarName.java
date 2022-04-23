@@ -10,8 +10,9 @@ import racingcar.common.ErrorMessage;
  **/
 public class CarName {
 
-    private final int MAX_SIZE = 5;
-    private String name;
+    private static final int MAX_SIZE = 5;
+
+    private final String name;
 
     public CarName(String name) {
         validate(name);
