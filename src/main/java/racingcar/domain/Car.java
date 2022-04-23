@@ -24,19 +24,11 @@ public class Car {
         this.movementCount.increase(moveNumber);
     }
 
-    public String getName() {
+    public String getCarName() {
         return this.carName.getName();
     }
 
-    public CarName getCarName() {
-        return carName;
-    }
-
-    public Integer getMoveCount() {
+    public Integer getMovementCount() {
         return this.movementCount.getCount();
-    }
-
-    public MovementCount getMovementCount() {
-        return movementCount;
     }
 }

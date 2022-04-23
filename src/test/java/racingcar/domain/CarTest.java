@@ -22,8 +22,8 @@ class CarTest {
         Car car = Car.newInstance(name);
 
         //then
-        assertThat(car.getName()).isEqualTo(name);
-        assertThat(car.getMoveCount()).isEqualTo(0);
+        assertThat(car.getCarName()).isEqualTo(name);
+        assertThat(car.getMovementCount()).isEqualTo(0);
     }
 
     @Test
@@ -59,7 +59,7 @@ class CarTest {
         car.move(moveNumber);
 
         //then
-        assertThat(car.getMoveCount()).isGreaterThan(0);
+        assertThat(car.getMovementCount()).isGreaterThan(0);
     }
 
     @Test
@@ -73,7 +73,7 @@ class CarTest {
         car.move(moveNumber);
 
         //then
-        assertThat(car.getMoveCount()).isEqualTo(0);
+        assertThat(car.getMovementCount()).isEqualTo(0);
     }
 
 }
