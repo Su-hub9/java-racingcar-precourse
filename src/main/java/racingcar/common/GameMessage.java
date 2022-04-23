@@ -14,4 +14,7 @@ public class GameMessage {
     public static String EXECUTE_RESULT_TITLE = "실행 결과";
     public static String EXECUTE_RESULT_FORMAT = "%s : %s%n";
     public static String MOVE_HYPHEN = "-";
+
+    public static String FINAL_WINNER_FORMAT = "최종 우승자: %s%n";
+    public static String WINNER_DELIMITER = ", ";
 }

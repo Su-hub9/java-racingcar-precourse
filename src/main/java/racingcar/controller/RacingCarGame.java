@@ -1,8 +1,6 @@
 package racingcar.controller;
 
-import racingcar.domain.Cars;
-import racingcar.domain.MoveNumbers;
-import racingcar.domain.RacingCount;
+import racingcar.domain.*;
 import racingcar.view.InputProvider;
 import racingcar.view.OutputProvider;
 
@@ -27,6 +25,7 @@ public class RacingCarGame {
             tryCount++;
             play(cars);
         }
+        gameResult(cars);
     }
 
     public void play(Cars cars) {
@@ -34,6 +33,12 @@ public class RacingCarGame {
         moveNumbers.addRandomNumbers(cars.size());
         cars.moveCars(moveNumbers);
         OutputProvider.printExecuteResult(cars);
+    }
+
+    public void gameResult(Cars cars) {
+        Ranking ranking = new Ranking(cars);
+        FinalWinners finalWinners = new FinalWinners(ranking);
+        OutputProvider.printFinalWinners(finalWinners);
     }
 
     private Cars getCars() {
@@ -48,7 +53,7 @@ public class RacingCarGame {
         try {
             String carNames = InputProvider.inputCarNames();
             cars = Cars.newInstance(carNames);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             OutputProvider.printExceptionMessage(e);
         }
         return cars;
@@ -70,7 +75,7 @@ public class RacingCarGame {
         try {
             String inputCount = InputProvider.inputRacingCount();
             racingCount = new RacingCount(inputCount);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             OutputProvider.printExceptionMessage(e);
         }
         return racingCount;

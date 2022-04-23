@@ -3,6 +3,7 @@ package racingcar.view;
 import racingcar.common.GameMessage;
 import racingcar.domain.Car;
 import racingcar.domain.Cars;
+import racingcar.domain.FinalWinners;
 
 /**
  * OutputProvider
@@ -36,5 +37,9 @@ public class OutputProvider {
             moveHyphen.append(GameMessage.MOVE_HYPHEN);
         }
         return moveHyphen.toString();
+    }
+
+    public static void printFinalWinners(FinalWinners finalWinners) {
+        System.out.printf(GameMessage.FINAL_WINNER_FORMAT, finalWinners.getWinnerNames());
     }
 }
