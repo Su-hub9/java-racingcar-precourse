@@ -17,7 +17,11 @@ public class RacingCarGame {
     public void start() {
         Cars cars = getCars();
         RacingCount racingCount = getRacingCount();
+        execute(cars, racingCount);
+    }
 
+    public void execute(Cars cars, RacingCount racingCount) {
+        OutputProvider.printExecuteResultTitle();
         int tryCount = 0;
         while (!racingCount.isEnd(tryCount)) {
             tryCount++;
@@ -29,6 +33,7 @@ public class RacingCarGame {
         MoveNumbers moveNumbers = MoveNumbers.newInstance();
         moveNumbers.addRandomNumbers(cars.size());
         cars.moveCars(moveNumbers);
+        OutputProvider.printExecuteResult(cars);
     }
 
     private Cars getCars() {
