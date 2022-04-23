@@ -1,7 +1,7 @@
 package racingcar.domain;
 
 /**
- * Car
+ * 경주 할 자동자
  *
  * @author suji
  * @date 2022-04-23

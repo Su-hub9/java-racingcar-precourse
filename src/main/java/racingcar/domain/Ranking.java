@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Ranking
+ * 자동차 랭킹
  *
  * @author suji
  * @date 2022-04-24

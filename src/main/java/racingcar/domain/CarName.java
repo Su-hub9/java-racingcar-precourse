@@ -3,7 +3,7 @@ package racingcar.domain;
 import racingcar.common.ErrorMessage;
 
 /**
- * CarName
+ * 자동차 이름
  *
  * @author suji
  * @date 2022-04-23

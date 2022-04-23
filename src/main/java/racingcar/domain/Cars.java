@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Cars
+ * 사용자에게 입력 받은 경주 할 자동차 목록
  *
  * @author suji
  * @date 2022-04-23

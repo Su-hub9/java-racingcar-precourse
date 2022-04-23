@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * FinalWinners
+ * 최종 우승자 목록
  *
  * @author suji
  * @date 2022-04-24

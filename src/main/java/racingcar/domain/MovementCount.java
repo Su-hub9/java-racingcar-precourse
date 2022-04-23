@@ -1,7 +1,7 @@
 package racingcar.domain;
 
 /**
- * MovementCount
+ * 이동 횟수
  *
  * @author suji
  * @date 2022-04-23

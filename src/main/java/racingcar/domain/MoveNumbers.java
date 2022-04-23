@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * MoveNumbers
+ * 이동 조건이 될 숫자
  *
  * @author suji
  * @date 2022-04-23

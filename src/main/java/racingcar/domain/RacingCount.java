@@ -3,7 +3,7 @@ package racingcar.domain;
 import racingcar.common.ErrorMessage;
 
 /**
- * 게임 시도 횟수
+ * 사용자에게 입력 받은 경주 시도 횟수
  *
  * @author suji
  * @date 2022-04-23
