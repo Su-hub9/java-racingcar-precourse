@@ -9,15 +9,19 @@ package racingcar.domain;
 public class Car {
 
     private CarName carName;
-    private Integer movement;
+    private MovementCount movementCount;
 
-    private Car(CarName carName) {
+    private Car(CarName carName, MovementCount movementCount) {
         this.carName = carName;
-        this.movement = 0;
+        this.movementCount = movementCount;
     }
 
     public static Car newInstance(String name) {
-        return new Car(new CarName(name));
+        return new Car(new CarName(name), new MovementCount());
+    }
+
+    public void move(int moveNumber) {
+        this.movementCount.increase(moveNumber);
     }
 
     public String getName() {
@@ -28,7 +32,11 @@ public class Car {
         return carName;
     }
 
-    public Integer getMovement() {
-        return movement;
+    public Integer getMoveCount() {
+        return this.movementCount.getCount();
+    }
+
+    public MovementCount getMovementCount() {
+        return movementCount;
     }
 }

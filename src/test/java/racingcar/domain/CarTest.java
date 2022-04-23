@@ -23,7 +23,7 @@ class CarTest {
 
         //then
         assertThat(car.getName()).isEqualTo(name);
-        assertThat(car.getMovement()).isEqualTo(0);
+        assertThat(car.getMoveCount()).isEqualTo(0);
     }
 
     @Test
@@ -51,19 +51,29 @@ class CarTest {
     @Test
     void 자동자_전진() {
         //given
+        String name = "pobi";
+        int moveNumber = 4;
+        Car car = Car.newInstance(name);
 
         //when
+        car.move(moveNumber);
 
         //then
+        assertThat(car.getMoveCount()).isGreaterThan(0);
     }
 
     @Test
     void 자동차_멈춤() {
         //given
+        String name = "pobi";
+        int moveNumber = 3;
+        Car car = Car.newInstance(name);
 
         //when
+        car.move(moveNumber);
 
         //then
+        assertThat(car.getMoveCount()).isEqualTo(0);
     }
 
 }
