@@ -50,7 +50,7 @@ public class Cars {
         return this.cars.size();
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return this.cars == null || this.cars.isEmpty();
     }
 
